@@ -1,6 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: 100vw;
+    overflow-x: hidden;
     /* height: 60000000px; */
 }
 * {
@@ -34,6 +35,31 @@ body {
 .flex-box {
     display: flex;
     justify-content: space-between;
+}
+.container {
+    width: 1360px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+@media only screen and (max-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+@media only screen and (max-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media only screen and (max-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media only screen and (max-width:1200px) {
+    .container {
+        width: 1170px;
+    }
 }
 hr {
     height: 4px;
@@ -85,22 +111,26 @@ header button {
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 @media (max-width: 1440px)  {
+    .inside-links {
+        padding-top: 20px;
+    }
     .inside-links a:nth-child(1) {
         display: none;
+        font-size: 5px;
     }
 }
-@media  (max-width: 1024px)  {
+@media  (max-width: 1120px)  {
     .inside-links a:nth-child(2),
     .inside-links a:nth-child(3) {
         display: none;
     }
 }
-@media (max-width: 768px)  {
+@media (max-width: 800px)  {
     .inside-links a:nth-child(4) {
         display: none;
     }
 }
-@media (max-width: 576px)  {
+@media (max-width: 600px)  {
     .inside-links a:nth-child(5),
     .inside-links a:nth-child(6) {
         display: none;
@@ -136,7 +166,7 @@ nav {
     color: var(--color-3);
     margin:0 30px;
     padding: 10px;
-    font-size: 18px;
+    font-size: 1.2rem;
     transition: all .1s;
 }
 .inside-links li:hover {
@@ -170,42 +200,6 @@ nav {
     height: 80%;
     margin: 0 0 0 auto ;
     z-index: 3;
-}
-
-@media  (max-width: 1024px)  {
-    .section-left {
-        width: 90vw;
-        height: 90%;
-    }
-    .section-right {
-        width: 90vw;
-    }
-}
-@media (max-width: 768px)  {
-    .background-section{
-        display: none;
-    }
-    .section-left {
-        background-color: var(--color-11);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100vw;
-        height: 100%;
-    }
-    .section-right {
-        background-color: var(--color-11);
-        display: none;
-    }
-    .paragragh1-section-left,
-    .section-left h1 {
-        text-align: center;
-        width: 100%;
-    }
-    .under-section-left .right {
-        margin-left: 0;
-    }
 }
 
 .paragragh1-section-left {
@@ -313,60 +307,35 @@ nav {
     transform: scaleY(1.3);
     height: 85vh;
 }
-/* section2 (what we do) */
-@media (max-width: 1440px)  {
-    .section1-left {
-        width: 100%;
-        height: 70%;
-    }
-    .section1-left p{
-        font-size: 1rem;
-    }
-    .section1-middle,
-    .section1-right{
-        display: flex;
-        width: 100%;
-        height: 50%;
-    }
-    .section1-middle p,
-    .section1-right p{
-        font-size: 1rem;
-        margin: 0;
-    }
-    .section1-middle h2,
-    .section1-right h2 {
-        font-size: 1rem;
+@media only screen and (max-width: 460px)  {
+    .under-section-left {
+        width: 70vw;
     }
 }
-@media (max-width: 1200px)  {
-    .section-1 {
+@media only screen and (max-width: 900px)  {
+    .section-left {
+        background-color: var(--color-11);
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-    }
-    .section1-left {
+        flex-direction: column;
         width: 100vw;
-        height: 30%;
+        height: 100%;
     }
-    .section1-left p{
-        font-size: 1rem;
+    .section-right {
+        display: none;
     }
-    .section1-middle,
-    .section1-right{
-        display: flex;
-        width: 50%;
-        height: 25%;
+    .paragragh1-section-left,
+    .section-left h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px !important;
     }
-    .section1-middle p,
-    .section1-right p{
-        font-size: 1rem;
-        margin: 0;
-    }
-    .section1-middle h2,
-    .section1-right h2 {
-        font-size: 1rem;
+    .under-section-left .right {
+        margin: 10px !important;
     }
 }
+/* section2 (what we do) */
 .section1 {
     background-color: black;
     height: 90vh;
@@ -374,7 +343,7 @@ nav {
 .section-1 {
     align-items: center;
     width: 73vw;
-    height: 100%;
+    height: 100vh;
     margin: auto;
     display: flex;
     position: relative;
@@ -463,6 +432,75 @@ nav {
     width: 95%;
     color: var(--color-6);
 } 
+@media (max-width:1200px) {
+    .section-1 h1{
+        font-size: 30px;
+    }
+    .section-1 p{
+        font-size: 15px;
+    }
+    .section-1 h2{
+        font-size: 20px;
+    }
+}
+@media (max-width:992px) {
+    .section-1 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .section-1 img {
+        width: 30%;
+    }
+    .section-1 button{
+        padding: 5px;
+        margin: 5px 0 0 0;
+    }
+    .section-1 p{
+        font-size: 10px;
+        width: 100%;
+        margin: 3px;
+    }
+    .section-1 h1{
+        font-size: 15px;
+    }
+    .section-1 h2 {
+        font-size: 12px;
+    }
+    .section-1 hr {
+        margin: 0 auto;
+    }
+    .section1-left {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section1-middle {
+        width: 100%;
+        height: 25%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+    }
+    .section1-middle-up,
+    .section1-middle-down,
+    .section1-right-up,
+    .section1-right-down{
+        width: 48%;
+    }
+    .section1-right {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+}
+/* section 3 (ABOUT US) */
 .section2 {
     background-color: var(--color-8);
     height: 83vh;
@@ -536,6 +574,44 @@ color: var(--color-5);
 .side-image {
     margin: 10px;
 }
+@media (max-width:1365px) {
+    .section2-right h1 {
+        font-size: 30px;
+    }
+    .section2-right hr {
+        margin: 0 auto;
+    }
+    .section2-right {
+        text-align: center;
+    }
+}
+@media (max-width:1024px) {
+    .section2-left  {
+        display: none;
+    }
+}
+@media (max-width:425px) {
+    .under-section2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section2-right h1 {
+        font-size: 20px;
+    }
+    .section2-right h2 {
+        font-size: 15px;
+    }
+    .section2-right p {
+        font-size: 10px;
+        width: 100%;
+    }
+    .section2-right img {
+        width: 30px;
+    }
+}
+/* section 4 (article 1)*/
 .article1 {
     background: var(--gradient-color3) no-repeat ;
     background-image: url("imagess 4/1.jpg") ;
@@ -595,6 +671,37 @@ color: var(--color-5);
     color: var(--color-3);
     text-transform: capitalize;
 }
+@media (max-width:1025px) {
+    .article-1 h1 {
+        font-size: 40px;
+    }
+    .fa-plus {
+        font-size: 15px;
+        margin-left: 15px;
+    }
+    .crew {
+        height: 50%;
+        margin-right: 0;
+        text-align: center;
+    }
+    
+}
+@media (max-width:425px) {
+    .article-1 h1 {
+        font-size: 20px;
+    }
+    .fa-plus {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .crew {
+        height: 50%;
+        margin-right: 0;
+        text-align: center;
+    }
+    
+}
+/* section 5 (latest project) */
 .section3 {
     background-color: black;
     width: 100%;
@@ -621,9 +728,9 @@ color: var(--color-5);
 }
 .section3-left h1 {
     color: var(--color-3);
-    font-size: 65px;
+    font-size: 50px;
     text-transform: capitalize;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
 }
 .section3-left h1 span {
     color: var(--color-5);
@@ -633,14 +740,14 @@ color: var(--color-5);
     height: 4px;
     border: none;
     background-color: var(--color-5);
-    margin-bottom: 8%;
+    margin-bottom: 3%;
 }
 .paragragh2-section3-1 {
     line-height: 1.5;
     font-size: 18px;
     color: var(--color-6);
     width: 100%;
-    margin-bottom: 46px;
+    margin-bottom: 20px;
 }
 .under-section3-1 {
     width: 85%;
@@ -669,6 +776,57 @@ color: var(--color-5);
     width: 23vw;
     height: 43vh;
 }
+@media (max-width:1200px) {
+    .section-3-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .section3-left {
+        height: 50vh;
+    }
+    .section-3-1 h1 {
+        font-size: 25px;
+    }
+    .section-3-1 h3 {
+        font-size: 15px;
+    }
+    .section-3-1 p {
+        font-size: 15px;
+    }
+    .section-3-1 hr {
+        margin: 3% auto;
+    }
+    .paragragh2-section3-1 {
+        width: 100%;
+    }
+    .section3 .image1 {
+        width: 200px;
+        height: 200px;
+    }
+    .section-3-2 {
+        align-items: flex-end;
+    }
+    .section-3-2 img {
+        height: 55%;
+    }
+}
+@media (max-width:992px) {
+    .section-3-2 img {
+        height: 50%;
+    }
+    .section-3-1 h1 {
+        font-size: 15px;
+    }
+    .section-3-1 h3 {
+        font-size: 12px;
+    }
+    .section-3-1 p {
+        font-size: 10px;
+    }
+}
+/* section 6 (article 2) */
 .article2 {
     background: var(--gradient-color3) no-repeat ;
     background-image: url("imagess 4/side-view-portrait-of-a-woman-with-make-up-CTUMAUJ.jpg") ;
